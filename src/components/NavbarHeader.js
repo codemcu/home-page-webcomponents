@@ -1,34 +1,6 @@
 import { html, css, LitElement } from 'lit-element';
 
 class NavbarHeader extends LitElement {
-  static get styles() {
-    return css`
-      :host {
-        display: flex;
-        width: 100%;
-        /* padding: 25px; */
-        /* text-align: center; */
-      }
-
-      .navbar-default {
-        border-color: rgba(34, 34, 34, 0.05);
-        font-family: 'Titillium Web', sans-serif;
-        background-color: #fff;
-        transition: all 0.35s;
-      }
-
-      .navbar-default {
-        background-color: #f8f8f8;
-        border-color: #e7e7e7;
-      }
-
-      .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-      }
-    `;
-  }
-
   static get properties() {
     return {
       title: { type: String },
@@ -44,10 +16,10 @@ class NavbarHeader extends LitElement {
 
   render() {
     return html`
-      <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
-        <div class="container-fluid">
+      <nav class="navbar-fixed-top" id="mainNav">
+        <div class="container-navbar">
           <div class="navbar-header">
-            <button
+            <!-- <button
               class="navbar-toggle collapsed"
               data-target="#bs-example-navbar-collapse-1"
               data-toggle="collapse"
@@ -57,12 +29,12 @@ class NavbarHeader extends LitElement {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
+            </button> -->
             <a class="navbar-brand page-scroll" href="#page-top">MAURICIO CORREA</a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav">
               <li>
                 <a class="page-scroll" href="#home">Home</a>
               </li>
@@ -85,6 +57,70 @@ class NavbarHeader extends LitElement {
           </div>
         </div>
       </nav>
+    `;
+  }
+
+  static get styles() {
+    return css`
+      :host {
+        display: flex;
+        width: 100%;
+        color: #333;
+        min-height: 50px;
+      }
+
+      .navbar-fixed-top {
+        background-color: white;
+        transition: all 0.35s;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1030;
+        width: 100%;
+      }
+      .container-navbar {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        margin: 0;
+      }
+
+      .nav > li > a {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        color: #222;
+        /* line-height: 13px; */
+        padding: 10px 15px;
+        text-decoration: none;
+      }
+
+      /* .nav > li {
+      } */
+
+      .navbar-default .navbar-header .navbar-brand {
+        text-transform: uppercase;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        color: #f05f40;
+        text-decoration: none;
+        float: left;
+        /* height: 50px; */
+        padding: 15px 15px;
+        font-size: 18px;
+        line-height: 20px;
+      }
     `;
   }
 }

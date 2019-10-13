@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 
 import './NavbarHeader';
+import './CoverHome';
 
 class HomeLit extends LitElement {
   static get properties() {
@@ -13,6 +14,7 @@ class HomeLit extends LitElement {
   render() {
     return html`
       <navbar-header></navbar-header>
+      <cover-home></cover-home>
     `;
   }
 

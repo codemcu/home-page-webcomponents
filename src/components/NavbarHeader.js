@@ -99,13 +99,9 @@ class NavbarHeader extends LitElement {
         font-size: 13px;
         font-weight: 700;
         color: #222;
-        /* line-height: 13px; */
         padding: 10px 15px;
         text-decoration: none;
       }
-
-      /* .nav > li {
-      } */
 
       .navbar-default .navbar-header .navbar-brand {
         text-transform: uppercase;
@@ -116,7 +112,6 @@ class NavbarHeader extends LitElement {
         color: #f05f40;
         text-decoration: none;
         float: left;
-        /* height: 50px; */
         padding: 15px 15px;
         font-size: 18px;
         line-height: 20px;
